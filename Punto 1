@@ -1,0 +1,69 @@
+from pulp import *
+import pandas as pd
+
+data = pd.read_csv('/home/david/PycharmProjects/estadistica_avanzada/optimizacion/punto1.csv', sep='~', decimal=',')
+
+COSTO_PROPIO = 5
+prob = LpProblem("Transporte",LpMinimize)
+
+planta = [0, 1, 2, 3]
+productos = list(data['producto'])
+demanda = list(data['demanda'])
+capacidad = list(data['capacidad_propia'])
+empresa1 = list(data['empresa1'])
+empresa2 = list(data['empresa2'])
+empresa3 = list(data['empresa3'])
+
+data.costo_propio = data.costo_propio*COSTO_PROPIO
+costo = [list(data['costo_propio']),
+        list(data['costo1']),
+        list(data['costo2']),
+        list(data['costo3'])]
+
+
+costos = makeDict([planta, productos], costo,0)
+
+# Posibles combinaciones de productos y plantas
+combinaciones = [(c,b) for c in productos for b in planta]
+
+
+# creamos diccionario x que contendrá la candidad de producto generado por planta
+x = pulp.LpVariable.dicts("producto_planta", (productos, planta),
+                        lowBound = 0,
+                        cat = LpInteger)
+prob += lpSum([x[c][b]*costos[b][c] for (c,b) in combinaciones]), \
+            "Suma_de_costos_producto_planta"
+
+# restricciones de capacidad de producto por planta
+
+for c in productos:
+    prob += lpSum([x[c][i]] for i in planta) >= demanda[c-1]
+
+for c in productos:
+    prob += lpSum([x[c][0]]) <= capacidad[c-1]
+for c in productos:
+    prob += lpSum([x[c][1]]) <= empresa1[c-1]
+
+for c in productos:
+    prob += lpSum([x[c][2]]) <= empresa2[c-1]
+
+for c in productos:
+    prob += lpSum([x[c][3]]) <= empresa3[c-1]
+
+
+# Los datos del problema son exportado a archivo .lp
+prob.writeLP("problemaDeTransporte.lp")
+
+# Resolviendo el problema.
+prob.solve()
+
+# Imprimimos el estado del problema.
+print("Status: {}".format(LpStatus[prob.status]))
+
+# Imprimimos cada variable con su solución óptima.
+for v in prob.variables():
+    print("{0:} = {1:}".format(v.name, v.varValue))
+
+# Imprimimos el valor óptimo de la función objetivo
+print("Costo total de transporte = {}".format(prob.objective.value()))
+
