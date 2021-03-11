@@ -1,7 +1,7 @@
 # Planeación de la producción 2:
 ## Formulación matemática: (Falta)
 ## Formulación: Salida de la implementación con Python - [PuLP](https://pypi.org/project/PuLP/):
-La notación es la siguiente: producto_1_2_3, indica la cantidad de prodcuto del tipo 1 producido en la planta 2 en el mes 3.
+La notación es la siguiente: producto_planta_1_2_3, indica la cantidad de prodcuto del tipo 1 producido en la planta 2 en el mes 3.
 ### MINIMIZE:
 11000*producto_planta_1_1_1 + 11000*producto_planta_1_1_2 + 11000*producto_planta_1_1_3 + 11000*producto_planta_1_1_4 + 11400*producto_planta_1_2_1 + 11400*producto_planta_1_2_2 + 11400*producto_planta_1_2_3 + 11400*producto_planta_1_2_4 + 9800*producto_planta_1_3_1 + 9800*producto_planta_1_3_2 + 9800*producto_planta_1_3_3 + 9800*producto_planta_1_3_4 + 9800*producto_planta_1_4_1 + 9800*producto_planta_1_4_2 + 9800*producto_planta_1_4_3 + 9800*producto_planta_1_4_4 + 11700*producto_planta_2_1_1 + 11700*producto_planta_2_1_2 + 11700*producto_planta_2_1_3 + 11700*producto_planta_2_1_4 + 12200*producto_planta_2_2_1 + 12200*producto_planta_2_2_2 + 12200*producto_planta_2_2_3 + 12200*producto_planta_2_2_4 + 13400*producto_planta_2_3_1 + 13400*producto_planta_2_3_2 + 13400*producto_planta_2_3_3 + 13400*producto_planta_2_3_4 + 13400*producto_planta_2_4_1 + 13400*producto_planta_2_4_2 + 13400*producto_planta_2_4_3 + 13400*producto_planta_2_4_4 + 0
 
