@@ -142,3 +142,4 @@ Costo total de producción = 193610000.0
 + Se llega a una solución óptima
 + El producto 1 debe ser producido solo por las plantas 3 y 4 en las cantidades indicadas mensualmente para poder satisfacer la demanda y mantener los niveles de producción óptimos para la recuperación de la inversión
 +  El producto 2 debe ser producido solo por las plantas 1 y 2 en las cantidades indicadas mensualmente para satisfacer la demanda y mantener los niveles de producción óptimos para la recuperación de la inversión
++  El costo toal de producción es de: 193'610.000.
