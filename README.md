@@ -1,10 +1,10 @@
 # Optimización
 Respostorios para entrega de primer pacial de ejercicios del curso de modelos y métodos de optimización
-## instalación
+## Instalación
 pip install pulp
 sudo apt-get install glpk-utils
 sudo apt-get insall coinor-cbc
-## Formulación problema 1
+## Formulación problema 1 (en roceso de edición)
 ### Función Objetivo: con costo de la planta propia igual a 5
 MINIMIZE
 
