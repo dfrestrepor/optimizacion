@@ -54,7 +54,7 @@ La notación es la siguiente: producto_1_2_3, indica la cantidad de prodcuto del
 + _C39: 1.2 producto_planta_1_3_4 + 0.9 producto_planta_2_3_4 <= 150000  
 + _C40: 0.9 producto_planta_1_4_4 + 0.8 producto_planta_2_4_4 <= 138000  
 
-+ ### Restricciones de capacidad máXima de producción mensual (unidades)
++ ### Restricciones de capacidad máXima de producción mensual - inventario cero al final de último periodo (unidades)
 
 + _C41: producto_planta_1_1_1 + producto_planta_1_1_2 + producto_planta_1_1_3 + producto_planta_1_1_4 + producto_planta_1_2_1 + producto_planta_1_2_2 + producto_planta_1_2_3 + producto_planta_1_2_4 + producto_planta_1_3_1 + producto_planta_1_3_2 + producto_planta_1_3_3 + producto_planta_1_3_4 + producto_planta_1_4_1 + producto_planta_1_4_2 + producto_planta_1_4_3 + producto_planta_1_4_4 <= 10400
  
@@ -93,3 +93,52 @@ La notación es la siguiente: producto_1_2_3, indica la cantidad de prodcuto del
 0 <= producto_planta_2_4_2 Integer  
 0 <= producto_planta_2_4_3 Integer  
 0 <= producto_planta_2_4_4 Integer  
+## Resultados
+```
+Result - Optimal solution found
+Objective value:                193610000.00000000
+Enumerated nodes:               0
+Total iterations:               0
+Time (CPU seconds):             0.00
+Time (Wallclock seconds):       0.00
+Option for printingOptions changed from normal to all
+Total time (CPU seconds):       0.00   (Wallclock seconds):       0.00
+Status: Optimal
+producto_planta_1_1_1 = 0.0
+producto_planta_1_1_2 = 0.0
+producto_planta_1_1_3 = 0.0
+producto_planta_1_1_4 = 0.0
+producto_planta_1_2_1 = 0.0
+producto_planta_1_2_2 = 0.0
+producto_planta_1_2_3 = 0.0
+producto_planta_1_2_4 = 0.0
+producto_planta_1_3_1 = 700.0
+producto_planta_1_3_2 = 700.0
+producto_planta_1_3_3 = 700.0
+producto_planta_1_3_4 = 700.0
+producto_planta_1_4_1 = 1800.0
+producto_planta_1_4_2 = 2400.0
+producto_planta_1_4_3 = 2100.0
+producto_planta_1_4_4 = 1300.0
+producto_planta_2_1_1 = 1400.0
+producto_planta_2_1_2 = 1000.0
+producto_planta_2_1_3 = 900.0
+producto_planta_2_1_4 = 1200.0
+producto_planta_2_2_1 = 800.0
+producto_planta_2_2_2 = 800.0
+producto_planta_2_2_3 = 800.0
+producto_planta_2_2_4 = 800.0
+producto_planta_2_3_1 = 0.0
+producto_planta_2_3_2 = 0.0
+producto_planta_2_3_3 = 0.0
+producto_planta_2_3_4 = 0.0
+producto_planta_2_4_1 = 0.0
+producto_planta_2_4_2 = 0.0
+producto_planta_2_4_3 = 0.0
+producto_planta_2_4_4 = 0.0
+Costo total de producción = 193610000.0
+```
+## Conclusiones
++ Se llega a una solución óptima
++ El producto debe ser producido solo por las plantas 3 y 4 en las cantidades indicadas mensualmente para poder satisfacer la demanda y mantener los niveles de producción óptimos para la recuperación de la inversión
++  El producto debe ser producido solo por las plantas 1 y 2 en las cantidades indicadas mensualmente para satisfacer la demanda y mantener los niveles de producción óptimos para la recuperación de la inversión
