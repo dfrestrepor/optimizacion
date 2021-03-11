@@ -4,11 +4,9 @@ Repositiorio de optimización LP con python
 pip install pulp
 sudo apt-get install glpk-utils
 sudo apt-get insall coinor-cbc
-## Formulación problema 1 (en roceso de edición)
+## Formulación problema 1 (en proceso de edición)
 ### Función Objetivo: con costo de la planta propia igual a 5
-MINIMIZE
-
-5*producto_planta_10_0 + 10*producto_planta_10_1 + 10*producto_planta_10_2 + 10*producto_planta_10_3 + 5*producto_planta_1_0 + 49*producto_planta_1_1 + 35*producto_planta_1_2 + 35*producto_planta_1_3 + 5*producto_planta_2_0 + 35*producto_planta_2_1 + 25*producto_planta_2_2 + 25*producto_planta_2_3 + 5*producto_planta_3_0 + 7*producto_planta_3_1 + 5*producto_planta_3_2 + 5*producto_planta_3_3 + 5*producto_planta_4_0 + 63*producto_planta_4_1 + 45*producto_planta_4_2 + 45*producto_planta_4_3 + 5*producto_planta_5_0 + 7*producto_planta_5_1 + 5*producto_planta_5_2 + 5*producto_planta_5_3 + 5*producto_planta_6_0 + 14*producto_planta_6_1 + 10*producto_planta_6_2 + 10*producto_planta_6_3 + 5*producto_planta_7_0 + 35*producto_planta_7_1 + 25*producto_planta_7_2 + 25*producto_planta_7_3 + 5*producto_planta_8_0 + 7*producto_planta_8_1 + 5*producto_planta_8_2 + 5*producto_planta_8_3 + 5*producto_planta_9_0 + 7*producto_planta_9_1 + 5*producto_planta_9_2 + 5*producto_planta_9_3 + 0
+MINIMIZE : 5*producto_planta_10_0 + 10*producto_planta_10_1 + 10*producto_planta_10_2 + 10*producto_planta_10_3 + 5*producto_planta_1_0 + 49*producto_planta_1_1 + 35*producto_planta_1_2 + 35*producto_planta_1_3 + 5*producto_planta_2_0 + 35*producto_planta_2_1 + 25*producto_planta_2_2 + 25*producto_planta_2_3 + 5*producto_planta_3_0 + 7*producto_planta_3_1 + 5*producto_planta_3_2 + 5*producto_planta_3_3 + 5*producto_planta_4_0 + 63*producto_planta_4_1 + 45*producto_planta_4_2 + 45*producto_planta_4_3 + 5*producto_planta_5_0 + 7*producto_planta_5_1 + 5*producto_planta_5_2 + 5*producto_planta_5_3 + 5*producto_planta_6_0 + 14*producto_planta_6_1 + 10*producto_planta_6_2 + 10*producto_planta_6_3 + 5*producto_planta_7_0 + 35*producto_planta_7_1 + 25*producto_planta_7_2 + 25*producto_planta_7_3 + 5*producto_planta_8_0 + 7*producto_planta_8_1 + 5*producto_planta_8_2 + 5*producto_planta_8_3 + 5*producto_planta_9_0 + 7*producto_planta_9_1 + 5*producto_planta_9_2 + 5*producto_planta_9_3 + 0
 
 ### Restricciones  
 + _C1: producto_planta_1_0 + producto_planta_1_1 + producto_planta_1_2 + producto_planta_1_3 >= 1800  
