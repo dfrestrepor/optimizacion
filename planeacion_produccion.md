@@ -171,5 +171,5 @@ Costo total de producción = 31854.0
 ```
 ### Conclusiones
 + Se llega a una solución óptima
-+ +  El costo total de mínimo producción es de: 31.854.0
-+ Los productos deben ser producidos entre las plantas 1 y 3 en las cantidades determinadas por la solución optima
++ El costo total de mínimo producción es de: 31.854.0
++ Los productos deben ser producidos entre las plantas 1 y 3 en las cantidades determinadas por la solución óptima
