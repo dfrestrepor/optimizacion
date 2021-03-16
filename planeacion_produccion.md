@@ -1,4 +1,7 @@
 # Planeación de la producción 2:
++ [Datos](https://github.com/dfrestrepor/optimizacion/blob/main/datos/punto1.csv)
++ [Código](https://github.com/dfrestrepor/optimizacion/blob/main/main/planeacion_produccion1.py)
++ [Resultados](https://github.com/dfrestrepor/optimizacion/blob/main/output/Resultado_punto1.csv)
 ## Formulación matemática: (Falta)
 ## Formulación: Salida de la implementación con Python - [PuLP](https://pypi.org/project/PuLP/):
 La notación es la siguiente: producto_planta_1_0, indica la cantidad de prodcuto del tipo 1 producido en la planta 0 donde cero es la planta propia y 1,2,3 las plantas de terceros.
