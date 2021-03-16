@@ -1,8 +1,8 @@
 # Optimización (en construcción)
 Repositiorio de optimización LP con python
 ## Contenido
-+ [Planeación de la producción 1](https://github.com/dfrestrepor/optimizacion/blob/planeacion_produccion.md)
-+ [Planeación de la producción 2](https://github.com/dfrestrepor/optimizacion/blob/planeacion_produccion2.md)
++ [Planeación de la producción 1](https://github.com/dfrestrepor/optimizacion/blob/main/planeacion_produccion.md)
++ [Planeación de la producción 2](https://github.com/dfrestrepor/optimizacion/blob/main/planeacion_produccion2.md)
 ## Prerrequisito
 ```
 pip install pulp  
