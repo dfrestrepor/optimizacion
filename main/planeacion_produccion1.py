@@ -56,14 +56,15 @@ def planning_production(data, planta,productos, demanda, capacidad, costo ):
     return variable
 
 if __name__ == '__main__':
-    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-    data = pd.read_csv(BASE_DIR + '/datos/punto1.csv', sep='~', decimal=',')
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__)).split('/')[:-1]
+    BASE_DIR = '/'.join(BASE_DIR)
+    data = pd.read_csv(BASE_DIR + '/datos/punto1.csv')
     # Costo propio como valor constante default = 1
     COSTO_PROPIO = 1
     CAPACIDAD = ['capacidad_propia', 'empresa1', 'empresa2', 'empresa3']
     COSTOS = ['costo_propio', 'costo1', 'costo2', 'costo3']
     DEMANDA = 'demanda'
-    data['costo_propio'] = data.costo_propio * COSTO_PROPIO
+    data['costo_propio'] = COSTO_PROPIO
     result = planning_production(data, 4,'producto', DEMANDA, CAPACIDAD, COSTOS )
     df= pd.DataFrame(result)
     df.to_csv(BASE_DIR + '/output/Resultado_punto1.csv', index=False)
