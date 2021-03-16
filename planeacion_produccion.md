@@ -1,15 +1,15 @@
 # Planeación de la producción 2:
 ## Formulación matemática: (Falta)
 ## Formulación: Salida de la implementación con Python - [PuLP](https://pypi.org/project/PuLP/):
-La notación es la siguiente: producto_planta_1_0, indica la cantidad de prodcuto del tipo 1 producido en la planta 0 donde cero es la planta propia.
+La notación es la siguiente: producto_planta_1_0, indica la cantidad de prodcuto del tipo 1 producido en la planta 0 donde cero es la planta propia y 1,2,3 las plantas de terceros.
 ### Función Objetivo:
 ```
 MINIMIZE
-1*producto_planta_10_0 + 10*producto_planta_10_1 + 10*producto_planta_10_2 + 10*producto_planta_10_3 + 1*producto_planta_1_0 + 49*producto_planta_1_1 + 35*producto_planta_1_2 + 7*producto_planta_1_3 + 1*producto_planta_2_0 + 35*producto_planta_2_1 + 25*producto_planta_2_2 + 5*producto_planta_2_3 + 1*producto_planta_3_0 + 7*producto_planta_3_1 + 5*producto_planta_3_2 + 1*producto_planta_3_3 + 1*producto_planta_4_0 + 63*producto_planta_4_1 + 45*producto_planta_4_2 + 9*producto_planta_4_3 + 1*producto_planta_5_0 + 7*producto_planta_5_1 + 5*producto_planta_5_2 + 1*producto_planta_5_3 + 1*producto_planta_6_0 + 14*producto_planta_6_1 + 10*producto_planta_6_2 + 2*producto_planta_6_3 + 1*producto_planta_7_0 + 35*producto_planta_7_1 + 25*producto_planta_7_2 + 5*producto_planta_7_3 + 1*producto_planta_8_0 + 7*producto_planta_8_1 + 5*producto_planta_8_2 + 1*producto_planta_8_3 + 1*producto_planta_9_0 + 7*producto_planta_9_1 + 5*producto_planta_9_2 + 1*producto_planta_9_3 + 0
+1*producto_planta_10_0 + 10*producto_planta_10_1 + 10*producto_planta_10_2 + 10*producto_planta_10_3 + 1*producto_planta_1_0 + 49*producto_planta_1_1 + 35*producto_planta_1_2 + 7*producto_planta_1_3 + 1*producto_planta_2_0 + 35*producto_planta_2_1 + 25*producto_planta_2_2 + 5*producto_planta_2_3 + 1*producto_planta_3_0 + 7*producto_planta_3_1 + 5*producto_planta_3_2 + 1*producto_planta_3_3 + 1*producto_planta_4_0 + 63*producto_planta_4_1 + 45*producto_planta_4_2 + 9*producto_planta_4_3 + 1*producto_planta_5_0 + 7*producto_planta_5_1 + 5*producto_planta_5_2 + 1*producto_planta_5_3 + 1*producto_planta_6_0 + 14*producto_planta_6_1 + 10*producto_planta_6_2 + 2*producto_planta_6_3 + 1*producto_planta_7_0 + 35*producto_planta_7_1 + 25*producto_planta_7_2 + 5*producto_planta_7_3 + 1*producto_planta_8_0 + 7*producto_planta_8_1 + 5*producto_planta_8_2 + 1*producto_planta_8_3 + 1*producto_planta_9_0 + 7*producto_planta_9_1 + 5*producto_planta_9_2 + 1*producto_planta_9_3
 ```
 ### Restricciones
 
-## Restricciones de demanda
+### Restricciones de demanda
 ```
 _C1: producto_planta_1_0 + producto_planta_1_1 + producto_planta_1_2
  + producto_planta_1_3 >= 1800
@@ -116,3 +116,57 @@ _C41: producto_planta_10_3 <= 17857.1428571
 0 <= producto_planta_9_2 Integer
 0 <= producto_planta_9_3 Integer
 ```
+### Resultados
+```
+Result - Optimal solution found
+Objective value:                31854.00000000
+Enumerated nodes:               0
+Total iterations:               0
+Time (CPU seconds):             0.00
+Time (Wallclock seconds):       0.00
+Option for printingOptions changed from normal to all
+Total time (CPU seconds):       0.00   (Wallclock seconds):       0.00
+Status: Optimal
+producto_planta_10_0 = 3000.0
+producto_planta_10_1 = 0.0
+producto_planta_10_2 = 0.0
+producto_planta_10_3 = 0.0
+producto_planta_1_0 = 1800.0
+producto_planta_1_1 = 0.0
+producto_planta_1_2 = 0.0
+producto_planta_1_3 = 0.0
+producto_planta_2_0 = 0.0
+producto_planta_2_1 = 0.0
+producto_planta_2_2 = 0.0
+producto_planta_2_3 = 2000.0
+producto_planta_3_0 = 0.0
+producto_planta_3_1 = 0.0
+producto_planta_3_2 = 0.0
+producto_planta_3_3 = 1200.0
+producto_planta_4_0 = 1700.0
+producto_planta_4_1 = 0.0
+producto_planta_4_2 = 0.0
+producto_planta_4_3 = 0.0
+producto_planta_5_0 = 0.0
+producto_planta_5_1 = 0.0
+producto_planta_5_2 = 0.0
+producto_planta_5_3 = 2100.0
+producto_planta_6_0 = 0.0
+producto_planta_6_1 = 0.0
+producto_planta_6_2 = 0.0
+producto_planta_6_3 = 1800.0
+producto_planta_7_0 = 549.0
+producto_planta_7_1 = 0.0
+producto_planta_7_2 = 0.0
+producto_planta_7_3 = 701.0
+producto_planta_8_0 = 0.0
+producto_planta_8_1 = 0.0
+producto_planta_8_2 = 0.0
+producto_planta_8_3 = 1900.0
+producto_planta_9_0 = 0.0
+producto_planta_9_1 = 0.0
+producto_planta_9_2 = 0.0
+producto_planta_9_3 = 2500.0
+Costo total de producción = 31854.0
+```
+### Conclusiones
