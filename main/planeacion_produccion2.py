@@ -1,9 +1,7 @@
 from pulp import *
 import pandas as pd
-# https://towardsdatascience.com/linear-programming-and-discrete-optimization-with-python-using-pulp-449f3c5f6e99
-# https://github.com/ekhoda/optimization-tutorial/
-# https://relopezbriega.github.io/blog/2017/01/18/problemas-de-optimizacion-con-python/#:~:text=El%20objetivo%20de%20la%20programaci%C3%B3n,est%C3%A1n%20sujetas%20a%20restricciones%20lineales.
-# https://ichi.pro/es/programacion-lineal-usando-python-38164786352096
+import os
+
 data = pd.read_csv('/home/david/PycharmProjects/estadistica_avanzada/optimizacion/punto2.csv', sep='~', decimal=',')
 
 prob = LpProblem("Planeación de la producción 2",LpMinimize)
@@ -66,27 +64,6 @@ prob.addConstraint(LpConstraint(
     sense=LpConstraintGE,
     rhs=mes[0][0]))
 
-
-"""
-prob += lpSum([x[1][c][2]] for c in planta) + (lpSum([x[1][c][1]- lpSum(mes[0][0]) for c in planta]) ) >= mes[0][1]
-prob += lpSum([x[1][c][3]-(x[1][c][2]) for c in planta]) +mes[0][1] >= mes[0][2]
-prob += lpSum([x[1][c][4]-(x[1][c][3]) for c in planta]) +mes[0][2] >= mes[0][3]
-prob += lpSum([x[1][c][4] for c in planta]) + [lpSum([x[1][c][3] for c in planta])] <= mes[0][3]
-
-prob += lpSum([x[1][c][3] for c in planta]) -lpSum([x[1][c][2] for c in planta]) >= mes[0][2]
-prob += lpSum([x[1][c][4] for c in planta]) -lpSum([x[1][c][3] for c in planta]) >= mes[0][3]
-
-# demanda por mes con balanceo de inventario, producto 2
-
-prob += lpSum([x[2][c][1] for c in planta]) >= mes[1][0]
-prob += lpSum([x[2][c][2] for c in planta]) -lpSum([x[2][c][1] for c in planta]) >= mes[1][1]
-prob += lpSum([x[2][c][3] for c in planta]) -lpSum([x[2][c][2] for c in planta]) >= mes[1][2]
-prob += lpSum([x[2][c][4] for c in planta]) -lpSum([x[2][c][3] for c in planta]) >= mes[1][3]
-
-for i in productos:
-    for b in range(len(mes[0])):
-        prob += lpSum([x[i][c][b+1] for c in planta]) >= mes[i-1][b]
-"""
 # capacidad de pprodicion
 for i in planta:
     for b in planta:
