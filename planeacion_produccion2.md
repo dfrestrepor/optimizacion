@@ -3,7 +3,27 @@
 + [Datos](https://github.com/dfrestrepor/optimizacion/blob/main/input/punto2.csv)
 + [Código](https://github.com/dfrestrepor/optimizacion/blob/main/main/planeacion_produccion2.py)
 + [Resultados](https://github.com/dfrestrepor/optimizacion/blob/main/output/Resultado_punto2.csv)
-## Formulación matemática: (Falta)
+## Formulación matemática:
++ **Variable de decisión**  
+<img src="https://render.githubusercontent.com/render/math?math=$X_{i,j,z}$" height="20">Donde Xi,j,z= cantidad de producto del producto **i** en la planta **j**, en mes **z** para todo i= {1,2}, j = {1,2,3,4}, Z = {1,2,3,4}.
+
++ **Función Objetivo**  
+MINIMIZAR  
+<img src="https://render.githubusercontent.com/render/math?math=$\sum_{i=1}^{2}\sum_{j=1}^{4}\sum_{z=1}^{4}C_{i,j,z}*X_{i,j,z}$" height="50">Donde **Ci,j,z** = Costo del producto i en la planta j en el mes z.
+
++ **Restricciones**  
++ Restricciones de niveles mínimo de producción de cada planta (unidades/mes):  
+<img src="https://render.githubusercontent.com/render/math?math=$\sum_{i=1}^{2}\sum_{j=1}^{4}\sum_{z=1}^{4}X_{i,j,z}>=Q_{j}$" height="50">Donde Qj= cantidad mínima de producción en la planta j.
++ Restricciones de niveles mínimo de demanda de producto por mes (unidades/mes):    
+<img src="https://render.githubusercontent.com/render/math?math=$\sum_{i=1}^{2}\sum_{j=1}^{4}\sum_{z=1}^{4}X_{i,j,z}>=D_{i,z}$" height="50">Donde Di,z= cantidad de demanda de producto i en el mes z.  
++ Restricciones de capacidad máxima de producción mensual (minutos de mano de obra/unidad):    
+<img src="https://render.githubusercontent.com/render/math?math=$\sum_{i=1}^{2}\sum_{j=1}^{4}\sum_{z=1}^{4}T_{i,j}*X_{i,j,z}<=P_{j}$" height="50">Donde Ti,j= Tiempo de producción del producto i en la planta j y Pj capacidad de producción de la planta J, se convierte a unidades de minuto para facilitar la operación con el tiempo de producción.
++ Restricciones para garantizar inventario cero al final de último periodo (unidades):  
+<img src="https://render.githubusercontent.com/render/math?math=$\sum_{i=1}^{2}\sum_{j=1}^{4}\sum_{z=1}^{4}X_{i,j,z}>=DT_{i}$" height="50">Donde DTi= cantidad de demanda total de producto i.  
++ Restricción de no negatividad:  
+<img src="https://render.githubusercontent.com/render/math?math=$X_{i,j,z}>=0$" height="20">Para todo i={1,...,10}, j = {0,1,2,3}, Z = {1,2,3,4}.
+
+
 ## Formulación: Salida de la implementación con Python - [PuLP](https://pypi.org/project/PuLP/):
 La notación es la siguiente: producto_planta_1_2_3, indica la cantidad de prodcuto del tipo 1 producido en la planta 2 en el mes 3.
 ### Función Objetivo:
@@ -60,7 +80,7 @@ MINIMIZE: 11000*producto_planta_1_1_1 + 11000*producto_planta_1_1_2 + 11000*prod
 + _C39: 1.2 producto_planta_1_3_4 + 0.9 producto_planta_2_3_4 <= 150000  
 + _C40: 0.9 producto_planta_1_4_4 + 0.8 producto_planta_2_4_4 <= 138000  
 ```
-### Restricciones de capacidad máxima de producción mensual y garantizar inventario cero al final de último periodo (unidades)
+### Restricciones para garantizar inventario cero al final de último periodo (unidades)
 ```
 + _C41: producto_planta_1_1_1 + producto_planta_1_1_2 + producto_planta_1_1_3 + producto_planta_1_1_4 + producto_planta_1_2_1 + producto_planta_1_2_2 + producto_planta_1_2_3 + producto_planta_1_2_4 + producto_planta_1_3_1 + producto_planta_1_3_2 + producto_planta_1_3_3 + producto_planta_1_3_4 + producto_planta_1_4_1 + producto_planta_1_4_2 + producto_planta_1_4_3 + producto_planta_1_4_4 <= 10400
  
