@@ -5,11 +5,11 @@
 + [Resultados](https://github.com/dfrestrepor/optimizacion/blob/main/output/Resultado_punto1.csv)
 ## Formulación matemática: (Falta)
 + **Variable de decisión**  
-</br>
-  <img src="https://render.githubusercontent.com/render/math?math=$x_{i,j}$" height="20">para todo i= {1,...,10} y j = {0,1,2,3}, donde i = producto i, j = planta j, donde cero es la planta propia.
+<img src="https://render.githubusercontent.com/render/math?math=$x_{i,j}$" height="20">para todo i= {1,...,10} y j = {0,1,2,3}, donde i = producto i, j = planta j, donde cero es la planta propia.
   
-+ **Función Objetivo**
-<img src="https://render.githubusercontent.com/render/math?math=$\sum_{1=0}^{10}\sum_{j=0}^{3}C_{i,j}*x_{i,j}$" height="50"> 
++ **Función Objetivo**  
+MINIMIZAR  
+<img src="https://render.githubusercontent.com/render/math?math=$\sum_{i=1}^{10}\sum_{j=0}^{3}C_{i,j}*x_{i,j}$" height="50">Donde Ci,j = Costo del producto i en la planta j.
 
 ## Formulación: Salida de la implementación con Python - [PuLP](https://pypi.org/project/PuLP/):
 La notación es la siguiente: producto_planta_1_0, indica la cantidad de prodcuto del tipo 1 producido en la planta 0 donde cero es la planta propia y 1,2,3 las plantas de terceros.
