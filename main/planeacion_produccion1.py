@@ -58,7 +58,7 @@ def planning_production(data, planta,productos, demanda, capacidad, costo ):
 if __name__ == '__main__':
     BASE_DIR = os.path.dirname(os.path.abspath(__file__)).split('/')[:-1]
     BASE_DIR = '/'.join(BASE_DIR)
-    data = pd.read_csv(BASE_DIR + '/datos/punto1.csv')
+    data = pd.read_csv(BASE_DIR + '/input/punto1.csv')
     # Costo propio como valor constante default = 1
     COSTO_PROPIO = 1
     CAPACIDAD = ['capacidad_propia', 'empresa1', 'empresa2', 'empresa3']
