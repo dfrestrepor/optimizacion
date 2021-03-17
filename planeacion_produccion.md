@@ -1,5 +1,5 @@
 # Planeación de la producción 1:
-+ [Enunciado del ejercicio](https://s3.amazonaws.com/david.restrepo/optimizacion/Formulaci%C3%B3n.pdf)
++ [Enunciado: ejercicio 1](https://s3.amazonaws.com/david.restrepo/optimizacion/Formulaci%C3%B3n.pdf)
 + [Datos](https://github.com/dfrestrepor/optimizacion/blob/main/input/punto1.csv)
 + [Código](https://github.com/dfrestrepor/optimizacion/blob/main/main/planeacion_produccion1.py)
 + [Resultados](https://github.com/dfrestrepor/optimizacion/blob/main/output/Resultado_punto1.csv)
