@@ -5,7 +5,7 @@
 + [Resultados](https://github.com/dfrestrepor/optimizacion/blob/main/output/Resultado_punto1.csv)
 ## Formulación matemática: (Falta)
 + **Variable de decisión**  
-<img src="https://render.githubusercontent.com/render/math?math=$X_{i,j}$" height="20">para todo i= {1,...,10} y j = {0,1,2,3}, donde i = producto i, j = planta j, donde cero es la planta propia y X la cantidad de producto.
+<img src="https://render.githubusercontent.com/render/math?math=$X_{i,j}$" height="20">X,,j= cantidad de producto del producoti en la planta ja para todo i= {1,...,10} y j = {0,1,2,3} donde cero es la planta propia y .
   
 + **Función Objetivo**  
 MINIMIZAR  
@@ -13,9 +13,16 @@ MINIMIZAR
 
 + **Restricciones**  
 Restricciones de demanda:  
-<img src="https://render.githubusercontent.com/render/math?math=$\sum_{i=1}^{10}\sum_{j=0}^{3}X_{i,j}>=d_{i}$" height="50">Donde Di= demanda del producto i  
-Restriccion de capacidad planta propia:  
-<img src="https://render.githubusercontent.com/render/math?math=$\sum_{i=1}^{10}X_{i,0}<=P_{0}$" height="50">Donde P0= Capacidad de la planta propia 
+<img src="https://render.githubusercontent.com/render/math?math=$\sum_{i=1}^{10}\sum_{j=0}^{3}X_{i,j}>=D_{i}$" height="50">Donde Di= demanda del producto i  
+
+Restricción de capacidad planta propia:  
+<img src="https://render.githubusercontent.com/render/math?math=$\sum_{i=1}^{10}X_{i,0}<=P_{0}$" height="50">Donde P0= Capacidad de la planta propia  
+
+Restricción de capacidad planta tercero:  
+<img src="https://render.githubusercontent.com/render/math?math=$X_{i,j}<=P_{i,j}$" height="20">Para todo {1,...,10} y j = {1,2,3}  
+
+Restricción de no negatividad:  
+<img src="https://render.githubusercontent.com/render/math?math=$X_{i,j}>=0$" height="20">Para todo {1,...,10} y j = {1,2,3}  
 
 ## Formulación: Salida de la implementación con Python - [PuLP](https://pypi.org/project/PuLP/):
 La notación es la siguiente: producto_planta_1_0, indica la cantidad de prodcuto del tipo 1 producido en la planta 0 donde cero es la planta propia y 1,2,3 las plantas de terceros.
