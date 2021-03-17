@@ -3,9 +3,9 @@
 + [Datos](https://github.com/dfrestrepor/optimizacion/blob/main/input/punto1.csv)
 + [Código](https://github.com/dfrestrepor/optimizacion/blob/main/main/planeacion_produccion1.py)
 + [Resultados](https://github.com/dfrestrepor/optimizacion/blob/main/output/Resultado_punto1.csv)
-## Formulación matemática: (Falta)
+## Formulación matemática: 
 + **Variable de decisión**  
-<img src="https://render.githubusercontent.com/render/math?math=$X_{i,j}$" height="20">X,,j= cantidad de producto del producoti en la planta ja para todo i= {1,...,10} y j = {0,1,2,3} donde cero es la planta propia y .
+<img src="https://render.githubusercontent.com/render/math?math=$X_{i,j}$" height="20">Xi,j= cantidad de producto del producoti en la planta ja para todo i= {1,...,10} y j = {0,1,2,3} donde cero es la planta propia.
   
 + **Función Objetivo**  
 MINIMIZAR  
