@@ -5,15 +5,17 @@
 + [Resultados](https://github.com/dfrestrepor/optimizacion/blob/main/output/Resultado_punto1.csv)
 ## Formulación matemática: (Falta)
 + **Variable de decisión**  
-<img src="https://render.githubusercontent.com/render/math?math=$x_{i,j}$" height="20">para todo i= {1,...,10} y j = {0,1,2,3}, donde i = producto i, j = planta j, donde cero es la planta propia.
+<img src="https://render.githubusercontent.com/render/math?math=$X_{i,j}$" height="20">para todo i= {1,...,10} y j = {0,1,2,3}, donde i = producto i, j = planta j, donde cero es la planta propia y X la cantidad de producto.
   
 + **Función Objetivo**  
 MINIMIZAR  
-<img src="https://render.githubusercontent.com/render/math?math=$\sum_{i=1}^{10}\sum_{j=0}^{3}C_{i,j}*x_{i,j}$" height="50">Donde Ci,j = Costo del producto i en la planta j.
+<img src="https://render.githubusercontent.com/render/math?math=$\sum_{i=1}^{10}\sum_{j=0}^{3}C_{i,j}*X_{i,j}$" height="50">Donde Ci,j = Costo del producto i en la planta j.
 
 + **Restricciones**  
-Restricciones de demanda:
-<img src="https://render.githubusercontent.com/render/math?math=$\sum_{i=1}^{10}\sum_{j=0}^{3}x_{i,j}>=d_{i}$" height="50">Donde Di= demanda del producto 1
+Restricciones de demanda:  
+<img src="https://render.githubusercontent.com/render/math?math=$\sum_{i=1}^{10}\sum_{j=0}^{3}X_{i,j}>=d_{i}$" height="50">Donde Di= demanda del producto i  
+Restriccion de capacidad planta propia:  
+<img src="https://render.githubusercontent.com/render/math?math=$\sum_{i=1}^{10}X_{i,0}<=P_{0}$" height="50">Donde P0= Capacidad de la planta propia 
 
 ## Formulación: Salida de la implementación con Python - [PuLP](https://pypi.org/project/PuLP/):
 La notación es la siguiente: producto_planta_1_0, indica la cantidad de prodcuto del tipo 1 producido en la planta 0 donde cero es la planta propia y 1,2,3 las plantas de terceros.
