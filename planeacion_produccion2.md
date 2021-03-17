@@ -1,4 +1,8 @@
 # Planeación de la producción 2:
++ [Enunciado del ejercicio](https://s3.amazonaws.com/david.restrepo/optimizacion/Formulaci%C3%B3n.pdf)
++ [Datos](https://github.com/dfrestrepor/optimizacion/blob/main/datos/punto2.csv)
++ [Código](https://github.com/dfrestrepor/optimizacion/blob/main/main/planeacion_produccion2.py)
++ [Resultados](https://github.com/dfrestrepor/optimizacion/blob/main/output/Resultado_punto2.csv)
 ## Formulación matemática: (Falta)
 ## Formulación: Salida de la implementación con Python - [PuLP](https://pypi.org/project/PuLP/):
 La notación es la siguiente: producto_planta_1_2_3, indica la cantidad de prodcuto del tipo 1 producido en la planta 2 en el mes 3.
