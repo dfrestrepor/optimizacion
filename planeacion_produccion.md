@@ -5,11 +5,11 @@
 + [Resultados](https://github.com/dfrestrepor/optimizacion/blob/main/output/Resultado_punto1.csv)
 ## Formulación matemática: 
 + **Variable de decisión**  
-<img src="https://render.githubusercontent.com/render/math?math=$X_{i,j}$" height="20">Xi,j= cantidad de producto del producoti en la planta ja para todo i= {1,...,10} y j = {0,1,2,3} donde cero es la planta propia.
+<img src="https://render.githubusercontent.com/render/math?math=$X_{i,j}$" height="20"> Xi,j= cantidad de producto del producto **i** en la planta **j** para todo i= {1,...,10} y j = {0,1,2,3} donde cero es la planta propia.
   
 + **Función Objetivo**  
 MINIMIZAR  
-<img src="https://render.githubusercontent.com/render/math?math=$\sum_{i=1}^{10}\sum_{j=0}^{3}C_{i,j}*X_{i,j}$" height="50">Donde Ci,j = Costo del producto i en la planta j.
+<img src="https://render.githubusercontent.com/render/math?math=$\sum_{i=1}^{10}\sum_{j=0}^{3}C_{i,j}*X_{i,j}$" height="50">Donde **Ci,j** = Costo del producto i en la planta j.
 
 + **Restricciones**  
 Restricciones de demanda:  
