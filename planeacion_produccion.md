@@ -17,9 +17,9 @@ Restricciones de demanda:
 Restricción de capacidad planta propia:  
 <img src="https://render.githubusercontent.com/render/math?math=$\sum_{i=1}^{10}X_{i,0}<=P_{0}$" height="50">Donde P0= Capacidad de la planta propia  
 Restricción de capacidad planta tercero:  
-<img src="https://render.githubusercontent.com/render/math?math=$X_{i,j}<=P_{i,j}$" height="20">Para todo {1,...,10} y j = {1,2,3}  
+<img src="https://render.githubusercontent.com/render/math?math=$X_{i,j}<=P_{i,j}$" height="20">Para todo i={1,...,10} y j = {1,2,3}  
 Restricción de no negatividad:  
-<img src="https://render.githubusercontent.com/render/math?math=$X_{i,j}>=0$" height="20">Para todo {1,...,10} y j = {1,2,3}  
+<img src="https://render.githubusercontent.com/render/math?math=$X_{i,j}>=0$" height="20">Para todo i={1,...,10} y j = {0,1,2,3}  
 
 ## Formulación: Salida de la implementación con Python - [PuLP](https://pypi.org/project/PuLP/):
 La notación es la siguiente: producto_planta_1_0, indica la cantidad de prodcuto del tipo 1 producido en la planta 0 donde cero es la planta propia y 1,2,3 las plantas de terceros.
@@ -51,7 +51,7 @@ _C9: producto_planta_9_0 + producto_planta_9_1 + producto_planta_9_2
 _C10: producto_planta_10_0 + producto_planta_10_1 + producto_planta_10_2
  + producto_planta_10_3 >= 3000
 ```
-### Restriccion de capacidad planta propia
+### Restricción de capacidad planta propia
 ```
 _C11: 2.23214285714 producto_planta_10_0 + producto_planta_1_0
  + 1.20535714286 producto_planta_2_0 + 0.875 producto_planta_3_0
@@ -59,7 +59,7 @@ _C11: 2.23214285714 producto_planta_10_0 + producto_planta_1_0
  + 1.51785714286 producto_planta_6_0 + 1.05357142857 producto_planta_7_0
  + 1.30357142857 producto_planta_8_0 + 1.875 producto_planta_9_0 <= 11200
  ```
- ### Restriccion de capacidad planta terceros
+ ### Restricción de capacidad planta terceros
  ```
 _C12: producto_planta_1_1 <= 5000
 _C13: producto_planta_2_1 <= 6026.78571429
