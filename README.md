@@ -1,4 +1,4 @@
-# Optimización (en construcción)
+# Optimización
 Repositiorio de optimización LP con python
 ## Contenido
 + [Planeación de la producción 1](https://github.com/dfrestrepor/optimizacion/blob/main/planeacion_produccion.md)
