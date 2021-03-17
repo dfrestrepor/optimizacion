@@ -11,6 +11,10 @@
 MINIMIZAR  
 <img src="https://render.githubusercontent.com/render/math?math=$\sum_{i=1}^{10}\sum_{j=0}^{3}C_{i,j}*x_{i,j}$" height="50">Donde Ci,j = Costo del producto i en la planta j.
 
++ **Restricciones**  
+Restricciones de demanda:
+<img src="https://render.githubusercontent.com/render/math?math=$\sum_{i=1}^{10}\sum_{j=0}^{3}x_{i,j}>=d_{i}$" height="50">Donde Di= demanda del producto 1
+
 ## Formulación: Salida de la implementación con Python - [PuLP](https://pypi.org/project/PuLP/):
 La notación es la siguiente: producto_planta_1_0, indica la cantidad de prodcuto del tipo 1 producido en la planta 0 donde cero es la planta propia y 1,2,3 las plantas de terceros.
 ### Función Objetivo:
@@ -18,8 +22,6 @@ La notación es la siguiente: producto_planta_1_0, indica la cantidad de prodcut
 MINIMIZE
 1*producto_planta_10_0 + 10*producto_planta_10_1 + 10*producto_planta_10_2 + 10*producto_planta_10_3 + 1*producto_planta_1_0 + 49*producto_planta_1_1 + 35*producto_planta_1_2 + 7*producto_planta_1_3 + 1*producto_planta_2_0 + 35*producto_planta_2_1 + 25*producto_planta_2_2 + 5*producto_planta_2_3 + 1*producto_planta_3_0 + 7*producto_planta_3_1 + 5*producto_planta_3_2 + 1*producto_planta_3_3 + 1*producto_planta_4_0 + 63*producto_planta_4_1 + 45*producto_planta_4_2 + 9*producto_planta_4_3 + 1*producto_planta_5_0 + 7*producto_planta_5_1 + 5*producto_planta_5_2 + 1*producto_planta_5_3 + 1*producto_planta_6_0 + 14*producto_planta_6_1 + 10*producto_planta_6_2 + 2*producto_planta_6_3 + 1*producto_planta_7_0 + 35*producto_planta_7_1 + 25*producto_planta_7_2 + 5*producto_planta_7_3 + 1*producto_planta_8_0 + 7*producto_planta_8_1 + 5*producto_planta_8_2 + 1*producto_planta_8_3 + 1*producto_planta_9_0 + 7*producto_planta_9_1 + 5*producto_planta_9_2 + 1*producto_planta_9_3
 ```
-### Restricciones
-
 ### Restricciones de demanda
 ```
 _C1: producto_planta_1_0 + producto_planta_1_1 + producto_planta_1_2
